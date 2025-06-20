@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    /* === Basisoptionen === */
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* === Imports und Pfade === */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+
+    /* === Keine Ausgabe durch tsc === */
+    "noEmit": true
+  },
+
+  /* === Nur Quellcode einbeziehen === */
+  "include": ["src/**/*"],
+
+  /* === Generierte oder unnötige Dateien ausschließen === */
+  "exclude": ["node_modules", "dist", "**/*.d.ts"],
+
+  /* === Optionale Referenzen für Vite Plugins oder Tools === */
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
